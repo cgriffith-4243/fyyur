@@ -71,6 +71,31 @@
 		{% endfor %}
 	</div>
 </section>
+<section>
+	<div>
+		<a href="/artists/{{ artist.id }}/edit"><button class="btn btn-primary btn-sm">Edit artist</button></a>
+		<button id="delete-button" data-id="{{ artist.id }}" class="btn btn-default btn-sm pull-right">Delete artist</button>
+	</div>
+</section>
+<script>
+	const deleteBtn = document.getElementById("delete-button");
+	deleteBtn.onclick = function(e) {
+		let confirmDelete = confirm("Are you sure you want to delete this artist?");
+		if (confirmDelete){
+			const artistId = e.target.dataset.id;
+			fetch('/artists/' + artistId, {
+					method: 'DELETE'
+				})
+			.then(response => response.json())
+			.then(data => {
+				// console.log(data);
+				if (data.redirect) {
+					window.location.replace(data.redirect);
+				}
+			})
+		}
+	}
+</script>
 
 {% endblock %}
 
