@@ -44,6 +44,6 @@ To start and run the local development server,
 
 ## Authors
 
-Cameron Griffith authored the [`app.py`](./app.py), [`models.py`](./app.py), [`forms.py`](./app.py), and the application README. Additionally, implemented functionality to edit and delete specific artists, venues, and shows.
+Cameron Griffith authored the [`app.py`](./app.py), [`models.py`](./models.py), [`forms.py`](./forms.py), and the application README. Additionally, implemented functionality to edit and delete specific artists, venues, and shows.
 
 The base code for this project was created by [`Udacity`](https://www.udacity.com) as part of the [`Full Stack Web Developer Nanodegree`](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd0044) program.
